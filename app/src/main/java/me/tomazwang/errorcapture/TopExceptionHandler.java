@@ -38,7 +38,7 @@ public class TopExceptionHandler implements Thread.UncaughtExceptionHandler{
 
         report.append("---------------------------------------\n\n");
 
-        // TODO: 2017/3/23, @tomaz: write file
+        FileUtil.writeFile(report.toString());
 
         defaultUEH.uncaughtException(thread, e);
 
