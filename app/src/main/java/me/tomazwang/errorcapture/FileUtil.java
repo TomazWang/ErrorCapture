@@ -93,6 +93,7 @@ public class FileUtil {
         String mimeType = myMime.getMimeTypeFromExtension(EXT_TXT);
 
         intent.setDataAndType(Uri.fromFile(traceFile),mimeType);
+
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         activity.startActivity(Intent.createChooser(intent, "Open file"));
